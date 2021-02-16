@@ -1,7 +1,6 @@
 import React from 'react'
 import home1 from "../img/home1.png"
-//styled
-// import styled from 'styled-components';
+//styles
 import {GS_Section, GS_Description, GS_Image, GS_Hide} from '../styles'
 
 const AboutSection = () => {
