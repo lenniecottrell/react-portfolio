@@ -2,22 +2,33 @@ import React from 'react'
 import home1 from "../img/home1.png"
 //styles
 import {GS_Section, GS_Description, GS_Image, GS_Hide} from '../styles'
+import {motion} from 'framer-motion'
 
 const AboutSection = () => {
+
+  //variants for framer motion
+
+
   return (
     <GS_Section>
       <GS_Description>
-        <div className="title">
+        <motion.div>
           <GS_Hide>
-            <h2>We work to make</h2>
+            <motion.h2>
+                We work to make
+            </motion.h2>
           </GS_Hide>
           <GS_Hide>
-            <h2>your <span>dreams</span> come</h2>
+            <motion.h2>
+               your <span>dreams</span> come
+            </motion.h2>
           </GS_Hide>
           <GS_Hide>
-            <h2>true.</h2>
+            <motion.h2>
+              true.
+            </motion.h2>
           </GS_Hide>
-        </div>
+        </motion.div>
         <p>
           Contact us for any photography or videography ideas that you have. We have amazing skillz
         </p>
