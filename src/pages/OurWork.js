@@ -1,17 +1,35 @@
-import React from 'react'
-import styled from 'styled-components'
-import {Link}from 'react-router-dom'
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 //images
-import athlete from '../img/athlete-small.png'
-import theRacer from '../img/theracer-small.png'
-import goodTimes from '../img/goodtimes-small.png'
+import athlete from "../img/athlete-small.png";
+import theRacer from "../img/theracer-small.png";
+import goodTimes from "../img/goodtimes-small.png";
 //animations
-import {motion} from 'framer-motion'
-import {pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer} from "../animation"
+import { motion } from "framer-motion";
+import {
+  pageAnimation,
+  fade,
+  photoAnim,
+  lineAnim,
+  slider,
+  sliderContainer,
+} from "../animation";
+import { useScroll } from "../components/useScroll";
 
 const OurWork = () => {
+  const [element, controls] = useScroll();
+  const [element2, controls2] = useScroll();
+
   return (
-    <S_Work variants={pageAnimation} initial="hidden" animate="show" exit="exit" style={{background: '#fff'}}>
+    <S_Work
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      style={{ background: "#fff" }}
+      layout="position"
+    >
       {/* these get staggered because of the staggerChildren property in pageAnimation */}
       <motion.div variants={sliderContainer}>
         <Frame1 variants={slider}></Frame1>
@@ -24,46 +42,59 @@ const OurWork = () => {
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-athlete">
           <S_Hide>
-            <motion.img variants={photoAnim} src={athlete} alt="The Athlete"/>
+            <motion.img variants={photoAnim} src={athlete} alt="The Athlete" />
           </S_Hide>
         </Link>
       </S_Movie>
-      <S_Movie>
+      <S_Movie
+        ref={element}
+        variants={fade}
+        animate={controls}
+        initial="hidden"
+      >
         <h2>The Racer</h2>
-        <div className="line"></div>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-racer">
-          <img src={theRacer} alt="The Racer"/>
+          <img src={theRacer} alt="The Racer" />
         </Link>
       </S_Movie>
-      <S_Movie>
+      <S_Movie
+        ref={element2}
+        variants={fade}
+        animate={controls2}
+        initial="hidden"
+      >
         <h2>Good Times</h2>
-        <div className="line"></div>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/good-times">
-          <img src={goodTimes} alt="Good Times"/>
+          <img src={goodTimes} alt="Good Times" />
         </Link>
       </S_Movie>
     </S_Work>
-  )
-}
+  );
+};
 
 const S_Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
   background: white;
-  h2{
+  h2 {
     padding: 1rem 0rem;
   }
-  img{
+  img {
     width: 100%;
     height: 70vh;
     object-fit: cover;
   }
+  @media (max-width: 1300px) {
+    padding: 2rem 2rem;
+  }
 `;
 
-const S_Movie = styled.div`
+const S_Movie = styled(motion.div)`
   padding-bottom: 10rem;
-  .line{
+  .line {
     height: 0.5rem;
     background: #23d997;
     margin-bottom: 3rem;
@@ -78,9 +109,9 @@ const S_Hide = styled.div`
 const Frame1 = styled(motion.div)`
   position: fixed;
   left: 0;
-  top: 10%;
+  top: 0%;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: #fffebf;
   z-index: 2;
 `;
@@ -94,4 +125,4 @@ const Frame4 = styled(Frame1)`
   background: #8effa0;
 `;
 
-export default OurWork
+export default OurWork;

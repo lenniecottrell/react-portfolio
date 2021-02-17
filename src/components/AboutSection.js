@@ -26,8 +26,8 @@ const AboutSection = () => {
           </GS_Hide>
         </motion.div>
         <motion.p variants={fade}>
-          Contact us for any photography or videography ideas that you have. We
-          have amazing skillz
+          Contact us for any photography or videography ideas that you have. Our
+          professionals have amazing skills.
         </motion.p>
         <motion.button variants={fade}>Contact Us</motion.button>
       </GS_Description>

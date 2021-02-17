@@ -75,6 +75,9 @@ const S_Services = styled(GS_Section)`
 const S_Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 
 const S_Card = styled.div`
