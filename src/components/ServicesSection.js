@@ -1,9 +1,9 @@
 import React from "react";
 import clock from "../img/clock.svg";
-import diaphragm from "../img/diaphragm.svg";
-import money from "../img/money.svg";
-import teamwork from "../img/teamwork.svg";
-import home2 from "../img/home2.png";
+import pumpkinPatch from "../img/Len_with_pup.png";
+import messageCircle from "../img/message-circle.svg";
+import teamwork from "../img/users.svg";
+import shuffle from "../img/shuffle.svg";
 import styled from "styled-components";
 import { GS_Section, GS_Description, GS_Image } from "../styles";
 import { useInView } from "react-intersection-observer";
@@ -20,44 +20,44 @@ const ServicesSection = () => {
       initial="hidden"
       ref={element}
     >
+      <GS_Image>
+        <img src={pumpkinPatch} alt="camera 2" />
+      </GS_Image>
       <GS_Description>
-        <h2>
-          High <span>quality</span> services
-        </h2>
+        <S_Title>
+          Workplace <span>values</span>
+        </S_Title>
         <S_Cards>
           <S_Card>
             <div className="icon">
-              <img src={clock} alt="clock" />
-              <h3>Efficient</h3>
+              <img src={clock} alt="Hustle" />
+              <h3>Hustle</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p>I always strive to beat deadlines</p>
           </S_Card>
           <S_Card>
             <div className="icon">
               <img src={teamwork} alt="teamwork" />
               <h3>Teamwork</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Working together is better than working alone</p>
           </S_Card>
           <S_Card>
             <div className="icon">
-              <img src={diaphragm} alt="diaphragm" />
-              <h3>Diaphragm</h3>
+              <img src={messageCircle} alt="communication" />
+              <h3>Communication</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p>We should always be on the same page</p>
           </S_Card>
           <S_Card>
             <div className="icon">
-              <img src={money} alt="affordable" />
-              <h3>Affordable</h3>
+              <img src={shuffle} alt="flexibility" />
+              <h3>Collaboration</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p>I love working across teams</p>
           </S_Card>
         </S_Cards>
       </GS_Description>
-      <GS_Image>
-        <img src={home2} alt="" />
-      </GS_Image>
     </S_Services>
   );
 };
@@ -72,9 +72,14 @@ const S_Services = styled(GS_Section)`
   }
 `;
 
+const S_Title = styled.h2`
+  padding-left: 5rem;
+`;
+
 const S_Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  padding-left: 5rem;
   @media (max-width: 1300px) {
     justify-content: center;
   }

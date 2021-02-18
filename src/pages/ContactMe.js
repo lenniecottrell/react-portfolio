@@ -1,17 +1,22 @@
 import React from "react";
+//icons
+import mail from "../img/mail.svg";
+import linkedin from "../img/linkedin.svg";
+import twitter from "../img/twitter.svg";
+import github from "../img/github.svg";
 //animations
 import { motion } from "framer-motion";
 import { pageAnimation, titleAnim } from "../animation";
 import styled from "styled-components";
 
-const ContactUs = () => {
+const ContactMe = () => {
   return (
     <S_Contact
       variants={pageAnimation}
       initial="hidden"
       animate="show"
       exit="exit"
-      style={{ background: "#fff" }}
+      style={{ background: "#1b1b1b" }}
     >
       <S_Title>
         <S_Hide>
@@ -21,20 +26,32 @@ const ContactUs = () => {
       <div>
         <S_Hide>
           <S_Social variants={titleAnim}>
-            <S_Circle></S_Circle>
-            <h2>Send Us A Message</h2>
+            <img src={mail} alt="email" />
+            <h2>Send me a message</h2>
           </S_Social>
         </S_Hide>
         <S_Hide>
           <S_Social variants={titleAnim}>
-            <S_Circle></S_Circle>
-            <h2>Like us on Facebook</h2>
+            <a href="https://twitter.com/lenniecottrell">
+              <img src={twitter} alt="twitter" />
+            </a>
+            <h2>Say hi on Twitter</h2>
           </S_Social>
         </S_Hide>
         <S_Hide>
           <S_Social variants={titleAnim}>
-            <S_Circle></S_Circle>
-            <h2>See more on Insta</h2>
+            <a href="https://www.github.com/lenniecottrell">
+              <img src={github} alt="github" />
+            </a>
+            <h2>Check out my GitHub</h2>
+          </S_Social>
+        </S_Hide>
+        <S_Hide>
+          <S_Social variants={titleAnim}>
+            <a href="https://linkedin.com/in/lenniecottrell">
+              <img src={linkedin} alt="linkedin" />
+            </a>
+            <h2>Connect with me</h2>
           </S_Social>
         </S_Hide>
       </div>
@@ -44,8 +61,11 @@ const ContactUs = () => {
 
 const S_Contact = styled(motion.div)`
   padding: 5rem 10rem;
-  color: #353535;
+  color: white;
   min-height: 90vh;
+  h2 {
+    color: white;
+  }
   @media (max-width: 1500px) {
     padding: 2rem;
     font-size: 1rem;
@@ -64,19 +84,13 @@ const S_Hide = styled.div`
   overflow: hidden;
 `;
 
-const S_Circle = styled.div`
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  background: #353535;
-`;
-
 const S_Social = styled(motion.div)`
   display: flex;
   align-items: center;
   h2 {
     margin: 2rem;
+    color: white;
   }
 `;
 
-export default ContactUs;
+export default ContactMe;

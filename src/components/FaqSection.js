@@ -16,43 +16,61 @@ const FaqSection = () => {
       initial="hidden"
     >
       <h2>
-        Any Questions? <span>FAQ</span>
+        Any <span>Questions?</span>
       </h2>
       <AnimateSharedLayout>
-        <Toggle title="How do I start?">
+        <Toggle title="What are your tech skills?">
           <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium, laudantium?
+              I'm strongest on the front end, but I'm comfortable with back end
+              tools as well.
+            </p>
+            <p>
+              I'm fluent in HTML, CSS/SCSS, and JavaScript, and know enough
+              Python to make things happen. I love building with React, and I'm
+              very comfortable with CSS frameworks like Bootstrap and Bulma.
+            </p>
+            <p>
+              I enjoy working in relational databases with SQL and have used
+              PostgreSQL and SQLite to build small projects.
             </p>
           </div>
         </Toggle>
-        <Toggle title="Daily Schedule">
+        <Toggle title="What are your goals?">
           <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium, laudantium?
+              I want to make tech that enriches lives. There is great power
+              inherent in tech, and I want to wield that power for good.
             </p>
           </div>
         </Toggle>
-        <Toggle title="Different Payment Methods">
+        <Toggle title="Do you have hobbies?">
           <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p>You bet!</p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium, laudantium?
+              I like baking very much, especially cookies and scones. I like to
+              read fantasy, science fiction, graphic novels, and science-y
+              nonfiction. Some of my favorite books I've read recently are "The
+              Name of the Wind" by Patrick Rothfuss, "Norse Mythology" by Niel
+              Gaiman, and "Other Minds: The Octopus, the Sea, and the Deep
+              Origins of Conciousness" by Peter Godfrey-Smith.
+            </p>
+            <p>
+              Before the pandemic, much of my time was dedicated to conducting
+              and singing choral music (I have two music degrees). Singing is,
+              unfortunately, a super-spreading activity, so these days I try to
+              improve my piano and ukulele skills when I make music.
+            </p>
+            <p>
+              I also like hiking, snowboarding, and generally exploring the
+              world with my partner and our two dogs.
             </p>
           </div>
         </Toggle>
-        <Toggle title="What products do you offer?">
+        <Toggle title="Your dog is really cute!">
           <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium, laudantium?
-            </p>
+            <p>That's not a question.</p>
+            <p>I know right? She's a very good girl.</p>
           </div>
         </Toggle>
       </AnimateSharedLayout>
@@ -62,7 +80,7 @@ const FaqSection = () => {
 
 const Faq = styled(GS_Section)`
   display: block;
-  span{
+  span {
     display: block;
   }
   h2 {
@@ -70,20 +88,20 @@ const Faq = styled(GS_Section)`
     font-weight: lighter;
   }
   .faq-line {
-    background: #CCCCCC;
+    background: #cccccc;
     height: 0.2rem;
     margin: 2rem 0rem;
     width: 100% auto;
   }
-  .question{
+  .question {
     padding: 3rem 0rem;
     cursor: pointer;
   }
   .answer {
     padding: 2rem 0rem;
-    p{
-      padding: 2rem 0rem;
-    }}
+    p {
+      padding: 2rem 0rem 0rem;
+    }
   }
 `;
 

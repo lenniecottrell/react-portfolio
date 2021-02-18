@@ -1,7 +1,8 @@
 import React from "react";
-import home1 from "../img/home1.png";
+import cowbell from "../img/cowbell.png";
 //styles
 import { GS_Section, GS_Description, GS_Image, GS_Hide } from "../styles";
+import styled from "styled-components";
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../animation";
 import Wave from "./Wave";
@@ -14,30 +15,33 @@ const AboutSection = () => {
       <GS_Description>
         <motion.div>
           <GS_Hide>
-            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
+            <motion.h2 variants={titleAnim}>Hello!</motion.h2>
           </GS_Hide>
           <GS_Hide>
             <motion.h2 variants={titleAnim}>
-              your <span>dreams</span> come
+              I'm <span>Lennie</span>
             </motion.h2>
           </GS_Hide>
           <GS_Hide>
-            <motion.h2 variants={titleAnim}>true.</motion.h2>
+            <motion.h2 variants={titleAnim}></motion.h2>
           </GS_Hide>
         </motion.div>
         <motion.p variants={fade}>
-          Contact us for any photography or videography ideas that you have. Our
-          professionals have amazing skills.
+          I'm a software developer from Portland, Oregon. I'd love to work with
+          you!
         </motion.p>
-        <motion.button variants={fade}>Contact Us</motion.button>
+        <S_ButtonContainer>
+          <motion.button variants={fade}>Projects</motion.button>
+          <motion.button variants={fade}>Contact Me</motion.button>
+        </S_ButtonContainer>
       </GS_Description>
       <GS_Image>
         <motion.img
           variants={photoAnim}
           initial={"hidden"}
           animate={"show"}
-          src={home1}
-          alt="guy with a camera"
+          src={cowbell}
+          alt="I'm fun at weddings"
         />
       </GS_Image>
       <Wave />
@@ -45,6 +49,9 @@ const AboutSection = () => {
   );
 };
 
-//styled components go at the bottom
+const S_ButtonContainer = styled(motion.div)`
+  display: flex;
+  width: 100%;
+`;
 
 export default AboutSection;

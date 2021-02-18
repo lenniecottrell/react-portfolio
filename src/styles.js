@@ -21,6 +21,9 @@ export const GS_Description = styled.div`
   h1 {
     font-weight: lighter;
   }
+  button {
+    margin: 0rem 2rem 0rem 0rem;
+  }
   @media (max-width: 1300px) {
     padding: 0;
     button {

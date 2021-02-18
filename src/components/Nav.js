@@ -10,12 +10,12 @@ const Nav = () => {
     <S_Nav>
       <h1>
         <Link id="logo" to="/">
-          Capture
+          lenniewritescode
         </Link>
       </h1>
       <ul>
         <li>
-          <Link to="/">About Us</Link>
+          <Link to="/">Home</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -23,7 +23,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/work">Our Work</Link>
+          <Link to="/work">Projects</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -31,12 +31,15 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="contact">Contact Us</Link>
+          <Link to="/contact">Contact</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
             animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
           />
+        </li>
+        <li>
+          <a href="https://lenniecottrell.github.io">Blog</a>
         </li>
       </ul>
     </S_Nav>
