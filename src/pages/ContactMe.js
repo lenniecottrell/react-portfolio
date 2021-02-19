@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 //icons
 import mail from "../img/mail.svg";
 import linkedin from "../img/linkedin.svg";
@@ -10,6 +10,8 @@ import { pageAnimation, titleAnim } from "../animation";
 import styled from "styled-components";
 
 const ContactMe = () => {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <S_Contact
       variants={pageAnimation}
@@ -26,9 +28,16 @@ const ContactMe = () => {
       <div>
         <S_Hide>
           <S_Social variants={titleAnim}>
-            <img src={mail} alt="email" />
-            <h2>Send me a message</h2>
+            <img src={mail} alt="email" onClick={() => setToggle(!toggle)} />
+            <h2 layout>Send me a message</h2>
           </S_Social>
+          {toggle ? (
+            <S_h4 initial="hidden" animate="show">
+              lenniecottrell@gmail.com
+            </S_h4>
+          ) : (
+            ""
+          )}
         </S_Hide>
         <S_Hide>
           <S_Social variants={titleAnim}>
@@ -84,12 +93,19 @@ const S_Hide = styled.div`
   overflow: hidden;
 `;
 
+const S_h4 = styled(motion.h4)`
+  align-items: center;
+`;
+
 const S_Social = styled(motion.div)`
   display: flex;
   align-items: center;
   h2 {
     margin: 2rem;
     color: white;
+  }
+  img {
+    cursor: pointer;
   }
 `;
 
