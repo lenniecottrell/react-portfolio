@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 //images
-import athlete from "../img/athlete-small.png";
-import theRacer from "../img/theracer-small.png";
-import goodTimes from "../img/goodtimes-small.png";
+import geordiPic from "../img/geordiPic.PNG";
+import cubePic from "../img/cubePic.PNG";
+import flashcardPic from "../img/flashcardPic.PNG";
+import cinemaPic from "../img/cinemaPic.PNG";
 //animations
 import { motion } from "framer-motion";
 import {
@@ -17,9 +17,11 @@ import {
 } from "../animation";
 import { useScroll } from "../components/useScroll";
 
-const OurWork = () => {
+const Work = () => {
   const [element, controls] = useScroll();
   const [element2, controls2] = useScroll();
+  const [element3, controls3] = useScroll();
+  const [element4, controls4] = useScroll();
 
   return (
     <S_Work
@@ -37,39 +39,80 @@ const OurWork = () => {
         <Frame3 variants={slider}></Frame3>
         <Frame4 variants={slider}></Frame4>
       </motion.div>
-      <S_Movie>
-        <motion.h2 variants={fade}>The Athlete</motion.h2>
+
+      <S_Project>
+        <motion.h2 variants={fade}>Interactive CSS Cube</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-athlete">
+        <a
+          href="https://lenniecottrell.github.io/3D-CSS-cube/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <S_Hide>
-            <motion.img variants={photoAnim} src={athlete} alt="The Athlete" />
+            <motion.img
+              variants={photoAnim}
+              src={cubePic}
+              alt="Interactive 3d CSS cube"
+            />
           </S_Hide>
-        </Link>
-      </S_Movie>
-      <S_Movie
+        </a>
+      </S_Project>
+
+      <S_Project
         ref={element}
         variants={fade}
         animate={controls}
         initial="hidden"
       >
-        <h2>The Racer</h2>
+        <motion.h2>CS Flashcard App (work in progress)</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-racer">
-          <img src={theRacer} alt="The Racer" />
-        </Link>
-      </S_Movie>
-      <S_Movie
-        ref={element2}
+        <a
+          href="https://github.com/lenniecottrell/flashcard-app-V2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <S_Hide>
+            <motion.img
+              variants={photoAnim}
+              src={flashcardPic}
+              alt="Computer Science flashcard app"
+            />
+          </S_Hide>
+        </a>
+      </S_Project>
+
+      <S_Project
+        ref={element3}
         variants={fade}
-        animate={controls2}
+        animate={controls3}
         initial="hidden"
       >
-        <h2>Good Times</h2>
+        <motion.h2>Geordi La Forge Quote Generator</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/good-times">
-          <img src={goodTimes} alt="Good Times" />
-        </Link>
-      </S_Movie>
+        <a
+          href="https://lenniecottrell.github.io/geordi-quote-gen/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={geordiPic} alt="Geordi La Forge Quote Generator" />
+        </a>
+      </S_Project>
+      <S_Project
+        ref={element4}
+        variants={fade}
+        animate={controls4}
+        initial="hidden"
+      >
+        <motion.h2>Cinema Landing Page</motion.h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <a
+          href="https://lenniecottrell.github.io/CinemaLandingPage/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={cinemaPic} alt="Cinema Landing Page" />
+        </a>
+      </S_Project>
     </S_Work>
   );
 };
@@ -92,7 +135,7 @@ const S_Work = styled(motion.div)`
   }
 `;
 
-const S_Movie = styled(motion.div)`
+const S_Project = styled(motion.div)`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
@@ -125,4 +168,4 @@ const Frame4 = styled(Frame1)`
   background: #8effa0;
 `;
 
-export default OurWork;
+export default Work;

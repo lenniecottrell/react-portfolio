@@ -11,10 +11,10 @@ import { useAnimation } from "framer-motion"; //this gives you more control over
 import { scrollReveal } from "../animation";
 import { useScroll } from "./useScroll";
 
-const ServicesSection = () => {
+const ValuesSection = () => {
   const [element, controls] = useScroll();
   return (
-    <S_Services
+    <S_Values
       variants={scrollReveal}
       animate={controls}
       initial="hidden"
@@ -58,11 +58,11 @@ const ServicesSection = () => {
           </S_Card>
         </S_Cards>
       </GS_Description>
-    </S_Services>
+    </S_Values>
   );
 };
 
-const S_Services = styled(GS_Section)`
+const S_Values = styled(GS_Section)`
   h2 {
     padding-bottom: 5rem;
   }
@@ -99,4 +99,4 @@ const S_Card = styled.div`
   }
 `;
 
-export default ServicesSection;
+export default ValuesSection;

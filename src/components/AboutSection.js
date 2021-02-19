@@ -1,6 +1,7 @@
 import React from "react";
-import cowbell from "../img/cowbell.png";
+import { Link } from "react-router-dom";
 //styles
+import cowbell from "../img/cowbell.png";
 import { GS_Section, GS_Description, GS_Image, GS_Hide } from "../styles";
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -31,8 +32,12 @@ const AboutSection = () => {
           you!
         </motion.p>
         <S_ButtonContainer>
-          <motion.button variants={fade}>Projects</motion.button>
-          <motion.button variants={fade}>Contact Me</motion.button>
+          <Link to="/work">
+            <motion.button variants={fade}>Projects</motion.button>
+          </Link>
+          <Link to="/contact">
+            <motion.button variants={fade}>Contact Me</motion.button>
+          </Link>
         </S_ButtonContainer>
       </GS_Description>
       <GS_Image>
