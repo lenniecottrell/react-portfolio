@@ -57,6 +57,12 @@ const AboutSection = () => {
 const S_ButtonContainer = styled(motion.div)`
   display: flex;
   width: 100%;
+  @media all and (max-width: 1200px) {
+    display: block;
+    button {
+      margin: 2rem;
+    }
+  }
 `;
 
 export default AboutSection;

@@ -1,5 +1,5 @@
 import React from "react";
-import clock from "../img/clock.svg";
+import trendingUp from "../img/trending-up.svg";
 import pumpkinPatch from "../img/Len_with_pup.png";
 import messageCircle from "../img/message-circle.svg";
 import teamwork from "../img/users.svg";
@@ -30,10 +30,10 @@ const ValuesSection = () => {
         <S_Cards>
           <S_Card>
             <div className="icon">
-              <img src={clock} alt="Hustle" />
-              <h3>Hustle</h3>
+              <img src={trendingUp} alt="Hustle" />
+              <h3>Growth</h3>
             </div>
-            <p>I always strive to beat deadlines</p>
+            <p>I'm constantly chasing improvement</p>
           </S_Card>
           <S_Card>
             <div className="icon">
@@ -67,8 +67,8 @@ const S_Values = styled(GS_Section)`
     padding-bottom: 5rem;
   }
   p {
-    width: 70%;
-    padding: 2rem 0rem 4rem 0rem;
+    width: 80%;
+    padding: 1rem 0rem 4rem 0rem;
   }
 `;
 
@@ -95,6 +95,8 @@ const S_Card = styled.div`
       background: white;
       color: black;
       padding: 1rem;
+      width: 55%;
+      text-align: center;
     }
   }
 `;

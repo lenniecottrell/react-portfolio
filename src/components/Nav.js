@@ -40,7 +40,13 @@ const Nav = () => {
           />
         </li>
         <li>
-          <a href="https://lenniecottrell.github.io">Blog</a>
+          <a
+            href="https://lenniecottrell.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Blog
+          </a>
         </li>
       </ul>
     </S_Nav>

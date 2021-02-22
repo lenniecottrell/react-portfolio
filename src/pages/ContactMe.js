@@ -41,7 +41,11 @@ const ContactMe = () => {
         </S_Hide>
         <S_Hide>
           <S_Social variants={titleAnim}>
-            <a href="https://twitter.com/lenniecottrell">
+            <a
+              href="https://twitter.com/lenniecottrell"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={twitter} alt="twitter" />
             </a>
             <h2>Say hi on Twitter</h2>
@@ -49,7 +53,11 @@ const ContactMe = () => {
         </S_Hide>
         <S_Hide>
           <S_Social variants={titleAnim}>
-            <a href="https://www.github.com/lenniecottrell">
+            <a
+              href="https://www.github.com/lenniecottrell"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={github} alt="github" />
             </a>
             <h2>Check out my GitHub</h2>
@@ -57,7 +65,11 @@ const ContactMe = () => {
         </S_Hide>
         <S_Hide>
           <S_Social variants={titleAnim}>
-            <a href="https://linkedin.com/in/lenniecottrell">
+            <a
+              href="https://linkedin.com/in/lenniecottrell"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={linkedin} alt="linkedin" />
             </a>
             <h2>Connect with me</h2>
