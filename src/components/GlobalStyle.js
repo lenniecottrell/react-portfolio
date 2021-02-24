@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 html{
-  @media (max-width: 1700px){
+  @media (max-width: 1300px){
     font-size: 75%; 
   }
 }
@@ -29,7 +29,7 @@ button {
   background: transparent;
   color: white;
   transition: all 0.5s ease;
-font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
   &:hover{
     background-color: #23d997;
     color: white;

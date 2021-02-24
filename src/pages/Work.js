@@ -40,31 +40,17 @@ const Work = () => {
         <Frame4 variants={slider}></Frame4>
       </motion.div>
 
-      <S_Project>
-        <motion.h2 variants={fade}>Interactive CSS Cube</motion.h2>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <a
-          href="https://lenniecottrell.github.io/3D-CSS-cube/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <S_Hide>
-            <motion.img
-              variants={photoAnim}
-              src={cubePic}
-              alt="Interactive 3d CSS cube"
-            />
-          </S_Hide>
-        </a>
-      </S_Project>
-
+      {/* Flashcard app */}
       <S_Project
         ref={element}
         variants={fade}
         animate={controls}
         initial="hidden"
       >
-        <motion.h2>CS Flashcard App (work in progress)</motion.h2>
+        <motion.h2 variants={fade}>
+          CS Flashcard App (work in progress)
+          <motion.p>React, PostgreSQL, Node, Express</motion.p>
+        </motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <a
           href="https://github.com/lenniecottrell/flashcard-app-V2"
@@ -81,13 +67,17 @@ const Work = () => {
         </a>
       </S_Project>
 
+      {/* Quote Generator */}
       <S_Project
-        ref={element3}
+        ref={element2}
         variants={fade}
-        animate={controls3}
+        animate={controls2}
         initial="hidden"
       >
-        <motion.h2>Geordi La Forge Quote Generator</motion.h2>
+        <motion.h2 variants={fade}>
+          Geordi La Forge Quote Generator
+          <motion.p>HTML, CSS, JavaScript</motion.p>
+        </motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <a
           href="https://lenniecottrell.github.io/geordi-quote-gen/"
@@ -97,13 +87,45 @@ const Work = () => {
           <img src={geordiPic} alt="Geordi La Forge Quote Generator" />
         </a>
       </S_Project>
+
+      {/* CSS cube*/}
+      <S_Project
+        ref={element3}
+        variants={fade}
+        animate={controls3}
+        initial="hidden"
+      >
+        <motion.h2 variants={fade}>
+          Interactive CSS Cube
+          <motion.p>HTML, CSS</motion.p>
+        </motion.h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <a
+          href="https://lenniecottrell.github.io/3D-CSS-cube/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <S_Hide>
+            <motion.img
+              variants={photoAnim}
+              src={cubePic}
+              alt="Interactive 3d CSS cube"
+            />
+          </S_Hide>
+        </a>
+      </S_Project>
+
+      {/* Cinema Landing Page */}
       <S_Project
         ref={element4}
         variants={fade}
         animate={controls4}
         initial="hidden"
       >
-        <motion.h2>Cinema Landing Page</motion.h2>
+        <motion.h2 variants={fade}>
+          Cinema Landing Page
+          <motion.p>HTML, Bootstrap CSS</motion.p>
+        </motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <a
           href="https://lenniecottrell.github.io/CinemaLandingPage/"
@@ -128,7 +150,7 @@ const S_Work = styled(motion.div)`
   img {
     width: 100%;
     height: 70vh;
-    object-fit: cover;
+    object-fit: contain;
   }
   @media (max-width: 1300px) {
     padding: 2rem 2rem;
@@ -141,6 +163,10 @@ const S_Project = styled(motion.div)`
     height: 0.5rem;
     background: #23d997;
     margin-bottom: 3rem;
+  }
+  p {
+    padding: 1rem 0rem;
+    color: #808080;
   }
 `;
 

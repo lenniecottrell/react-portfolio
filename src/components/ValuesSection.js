@@ -23,17 +23,17 @@ const ValuesSection = () => {
       <GS_Image>
         <img src={pumpkinPatch} alt="camera 2" />
       </GS_Image>
-      <GS_Description>
+      <S_Content>
         <S_Title>
           Workplace <span>values</span>
         </S_Title>
         <S_Cards>
           <S_Card>
             <div className="icon">
-              <img src={trendingUp} alt="Hustle" />
+              <img src={trendingUp} alt="growth" />
               <h3>Growth</h3>
             </div>
-            <p>I'm constantly chasing improvement</p>
+            <p>I'm always chasing improvement</p>
           </S_Card>
           <S_Card>
             <div className="icon">
@@ -47,7 +47,7 @@ const ValuesSection = () => {
               <img src={messageCircle} alt="communication" />
               <h3>Communication</h3>
             </div>
-            <p>We should always be on the same page</p>
+            <p>Everyone should be on the same page</p>
           </S_Card>
           <S_Card>
             <div className="icon">
@@ -57,46 +57,71 @@ const ValuesSection = () => {
             <p>I love working across teams</p>
           </S_Card>
         </S_Cards>
-      </GS_Description>
+      </S_Content>
     </S_Values>
   );
 };
+
+const S_Content = styled(GS_Description)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const S_Values = styled(GS_Section)`
   h2 {
     padding-bottom: 5rem;
   }
   p {
-    width: 80%;
-    padding: 1rem 0rem 4rem 0rem;
+    padding: 1rem 0rem 1rem 4rem;
+    width: 100%;
+    //border: 2px solid purple;
   }
 `;
 
 const S_Title = styled.h2`
-  padding-left: 5rem;
+  padding: 2rem 0rem 0rem 5rem;
 `;
 
 const S_Cards = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  padding-left: 5rem;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  /* padding-left: 5rem; */
+  align-items: center;
   @media (max-width: 1300px) {
     justify-content: center;
   }
 `;
 
 const S_Card = styled.div`
-  flex-basis: 20rem;
+  flex-basis: auto;
+  text-align: left;
+  //border: 2px solid purple;
+  margin: 2rem 0rem;
+  width: 50%;
   .icon {
     display: flex;
     align-items: center;
+    //border: 2px solid purple;
     h3 {
-      margin-left: 1rem;
+      margin: 0rem 0rem 0rem 1rem;
       background: white;
       color: black;
       padding: 1rem;
-      width: 55%;
+      width: 100%;
       text-align: center;
+      //border: 2px solid purple;
+    }
+  }
+  @media (max-width: 1300px) {
+    margin: 1rem 0rem;
+    width: 75%;
+    font-size: 1.5rem;
+    p {
+      padding: 1rem 0rem 1rem 4rem;
+      margin: 0rem 2rem 0rem 1rem;
+      font-size: 2rem;
     }
   }
 `;
