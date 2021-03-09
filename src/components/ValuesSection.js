@@ -1,6 +1,6 @@
 import React from "react";
 import trendingUp from "../img/trending-up.svg";
-import pumpkinPatch from "../img/Len_with_pup.png";
+import pumpkinPatch from "../img/Len_with_pup.jpg";
 import messageCircle from "../img/message-circle.svg";
 import teamwork from "../img/users.svg";
 import shuffle from "../img/shuffle.svg";
@@ -69,9 +69,9 @@ const S_Content = styled(GS_Description)`
 `;
 
 const S_Values = styled(GS_Section)`
-  h2 {
+  /* h2 {
     padding-bottom: 5rem;
-  }
+  } */
   p {
     padding: 1rem 0rem 1rem 4rem;
     width: 100%;
@@ -80,14 +80,17 @@ const S_Values = styled(GS_Section)`
 `;
 
 const S_Title = styled.h2`
-  padding: 2rem 0rem 0rem 5rem;
+  padding: 0rem 0rem 0rem 5rem;
+  text-align: center;
+  padding-bottom: 0;
+  @media (max-width: 1300px) {
+    padding: 2.5rem 0rem 2.5rem 4rem;
+  }
 `;
 
 const S_Cards = styled.div`
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
-  /* padding-left: 5rem; */
   align-items: center;
   @media (max-width: 1300px) {
     justify-content: center;

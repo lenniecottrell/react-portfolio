@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 //styles
-import cowbell from "../img/cowbell.png";
+import cowbell from "../img/cowbell.jpg";
 import { GS_Section, GS_Description, GS_Image, GS_Hide } from "../styles";
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -9,8 +9,6 @@ import { titleAnim, fade, photoAnim } from "../animation";
 import Wave from "./Wave";
 
 const AboutSection = () => {
-  //variants for framer motion
-
   return (
     <GS_Section>
       <GS_Description>
@@ -57,10 +55,11 @@ const AboutSection = () => {
 const S_ButtonContainer = styled(motion.div)`
   display: flex;
   width: 100%;
-  @media all and (max-width: 1200px) {
+  @media all and (max-width: 1300px) {
     display: block;
     button {
       margin: 2rem;
+      font-size: 1.5rem;
     }
   }
 `;

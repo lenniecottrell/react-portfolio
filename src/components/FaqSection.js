@@ -39,7 +39,7 @@ const FaqSection = () => {
         <Toggle title="What are your goals?">
           <div className="answer">
             <p>
-              I want to make tech that enriches lives. There is great power
+              I want to do work that enriches lives. There is great power
               inherent in tech, and I want to wield that power for good.
             </p>
           </div>
@@ -69,7 +69,6 @@ const FaqSection = () => {
         </Toggle>
         <Toggle title="Your dog is really cute!">
           <div className="answer">
-            <p>That's not a question.</p>
             <p>I know right? She's a very good girl.</p>
           </div>
         </Toggle>
@@ -101,6 +100,11 @@ const Faq = styled(GS_Section)`
     padding: 2rem 0rem;
     p {
       padding: 2rem 0rem 0rem;
+    }
+  }
+  @media (max-width: 1300px) {
+    p {
+      font-size: 2rem;
     }
   }
 `;

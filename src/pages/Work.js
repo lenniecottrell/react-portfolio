@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-pascal-case */
 import React from "react";
 import styled from "styled-components";
 //images
-import geordiPic from "../img/geordiPic.PNG";
-import cubePic from "../img/cubePic.PNG";
-import flashcardPic from "../img/flashcardPic.PNG";
-import cinemaPic from "../img/cinemaPic.PNG";
+import geordiPic from "../img/geordiPic.jpg";
+import cubePic from "../img/cubePic.jpg";
+import flashcardPic from "../img/updated-flashcard.jpg";
+import cinemaPic from "../img/cinemaPic.jpg";
 //animations
 import { motion } from "framer-motion";
 import {

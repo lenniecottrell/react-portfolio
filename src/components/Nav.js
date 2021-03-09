@@ -15,7 +15,7 @@ const Nav = () => {
         </Link>
       </h1>
       <ul>
-        <li>
+        <li id="home">
           <Link to="/">Home</Link>
           <Line
             transition={{ duration: 0.75 }}
@@ -89,6 +89,9 @@ const S_Nav = styled.nav`
     font-family: "Lobster", cursive;
     font-weight: lighter;
   }
+  #home {
+    padding-right: 0.5rem;
+  }
   li {
     padding-left: 10rem;
     position: relative;
@@ -105,6 +108,9 @@ const S_Nav = styled.nav`
       li {
         padding: 0;
       }
+    }
+    a {
+      font-size: 1.5rem;
     }
   }
 `;

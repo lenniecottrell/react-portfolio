@@ -29,6 +29,9 @@ export const GS_Description = styled.div`
     button {
       margin: 2rem 0rem 5rem 0rem;
     }
+    P {
+      font-size: 2rem;
+    }
   }
 `;
 
